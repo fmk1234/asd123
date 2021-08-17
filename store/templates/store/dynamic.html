@@ -1,0 +1,64 @@
+<html>
+{% load static %}
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Staatliches&display=swap" rel="stylesheet"> 
+    </head>
+<body>
+<style>
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+  background: #11e8bb; /* Old browsers */
+  background: -moz-linear-gradient(top,  #11e8bb 0%, #8200c9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #11e8bb 0%,#8200c9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11e8bb', endColorstr='#8200c9',GradientType=0 ); /* IE6-9 */
+  }
+
+
+.szoveg{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80;
+    display: flex;
+  place-content: center;
+  z-index: -1;
+  
+}
+
+.vissza{
+  display: flex;
+ place-content: left;
+ font-size: 2em;
+ font-family: 'Press Start 2P', cursive;
+ color:#8200c9;
+
+}
+
+</style>
+  
+
+
+
+
+<div id="canvas">
+<p class="vissza"> <a href="{% url 'store' %}"> Vissza </a> </p></a>
+  <h1 class="szoveg"> Hello! </h1>
+
+</div>
+
+
+
+
+	
+
+
+
+	<script src="{% static 'js/three.min.js' %}"> </script>
+	<script src="{% static 'js/jancsi.js' %}"></script>
+</body>
+</html>
