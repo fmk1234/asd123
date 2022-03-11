@@ -2,7 +2,8 @@
 {% load static %}
 
     <head>
-	
+	<title> Dakseemovich Inc. </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	</head>
 <body class="bg">
 <style>
@@ -45,20 +46,12 @@ h1{
     left: 10%;
 
 }
-h2{
-    font-size: 2em;
-    position: absolute;
-    z-index: 1;
-    top: 35%;
-    left: 12%;
-    z-index: 0;
-}
+
 
 .button_container {
 	position: absolute;
-
-  left: 16%;
-  top: 50%;
+  left: 45%;
+  top: 75%;
   z-index: 0;
 }
 
@@ -123,35 +116,86 @@ h2{
   font-size: 25px; 
 }
 
-@media screen and (max-width: 1024px) {
-	.hatter2{
-		display: block;
+@media screen and (max-width: 680px) {
+
+    .anyu{
+		font-size: 2em;
+    }
+	.apu {
+		font-size: 3em;
 	}
-    .hatter{
-        display: none;
-    }
-    .button_container{
-        top: 70%; 
-        left: 27%;
-    }
-    h2{
-        color: white;
-    }
     h1{
         color: white;
     }
+	.button_container {
+		left: 28vw;
+	}
 }
+
+body { font: 1em 'Source Sans Pro', Arial, sans-serif; background: #becccc; text-transform: uppercase; color: #fff; text-align: center; letter-spacing: -3px; padding-top: 10%; }
+
+.apu {
+  position: absolute;
+  top: 20%;
+  left: 1vw;
+  width: 100%;
+
+  text-shadow:     0 1px 0 hsl(174,5%,80%),
+	                 0 2px 0 hsl(174,5%,75%),
+	                 0 3px 0 hsl(174,5%,70%),
+	                 0 4px 0 hsl(174,5%,66%),
+	                 0 5px 0 hsl(174,5%,64%),
+	                 0 6px 0 hsl(174,5%,62%),
+	                 0 7px 0 hsl(174,5%,61%),
+	                 0 8px 0 hsl(174,5%,60%),
+	
+	                 0 0 5px rgba(0,0,0,.05),
+	                0 1px 3px rgba(0,0,0,.2),
+	                0 3px 5px rgba(0,0,0,.2),
+	               0 5px 10px rgba(0,0,0,.2),
+	              0 10px 10px rgba(0,0,0,.2),
+	              0 20px 20px rgba(0,0,0,.3);
+}
+
+
+
+
+.anyu {
+  position: absolute;
+  top: 45%;
+  left: 1vw;
+  width: 100%;
+
+  text-shadow:     0 1px 0 hsl(174,5%,80%),
+	                 0 2px 0 hsl(174,5%,75%),
+	                 0 3px 0 hsl(174,5%,70%),
+	                 0 4px 0 hsl(174,5%,66%),
+	                 0 5px 0 hsl(174,5%,64%),
+	                 0 6px 0 hsl(174,5%,62%),
+	                 0 7px 0 hsl(174,5%,61%),
+	                 0 8px 0 hsl(174,5%,60%),
+	
+	                 0 0 5px rgba(0,0,0,.05),
+	                0 1px 3px rgba(0,0,0,.2),
+	                0 3px 5px rgba(0,0,0,.2),
+	               0 5px 10px rgba(0,0,0,.2),
+	              0 10px 10px rgba(0,0,0,.2),
+	              0 20px 20px rgba(0,0,0,.3);
+}
+}
+
 
 </style>
 
 
-<h1> Zdarova tem!</h1>
-<h2> Klikk kovetkezo oldalert </h2>
-<image src="{% static 'images/genius.jpg'%}" class="hatter"></image>
-<image src="{% static 'images/mobil.jpg'%}" class="hatter2"></image>
-<div class="button_container">
+
+<h1 class="apu"> You like reading stories ? </h1>
+<h2 class="anyu"> This is <b>YOUR </b> place. </h2>
+
+
+<div class="button_container" >
 	
-	<a href="{% url 'store'%}"> <button class="btn" ><span>Több infó</span></button> </a>
+	<a href="{% url 'store'%}"> <button class="btn" ><span>Show More</span></button> </a>
 </div>
 
 

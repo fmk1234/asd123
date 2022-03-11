@@ -1,0 +1,297 @@
+{% load static %}
+<html>
+
+
+    <head>
+      <link rel="shortcut icon" href="{% static 'css/ico123.ico' %}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>WebPageFactory - Get your own website! </title>
+	</head>
+<body class="bg">
+<style>
+
+
+
+ 
+
+    
+
+  </style>
+
+
+
+
+
+<style>
+
+
+
+
+.hatter{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    display: block;
+    z-index: -1;
+    
+}
+
+.hatter2{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    display: none;
+    z-index: -1;
+}
+
+
+
+
+.button_container {
+	position: absolute;
+
+  left: 16%;
+  top: 50%;
+  z-index: 0;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+	font-size: 35px;
+}
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
+
+@media screen and (max-width: 1024px) {
+	.hatter2{
+		display: block;
+	}
+    .hatter{
+        display: none;
+    }
+    .button_container{
+        top: 70%; 
+        left: 27%;
+    }
+
+    }
+
+
+
+
+#mainnav {
+    position: absolute;
+    font-family: 'Roboto Condensed', sans-serif;
+    z-index: 1;
+      
+  }
+  #mainnav li {
+    margin:;
+    left:;
+    position: absolute;
+    display: none;
+      
+  }
+  #mainnav a {
+    color: orange;   
+    text-decoration: none;
+    font-size: 2em;
+    position: absolute;
+    left: 45.5vw;
+    top: 15vh;
+    
+        
+  
+  } 
+          ul li{
+              list-style: none;
+              margin-top: -50px;
+              
+          }
+  .hamb {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2.5em;
+    z-index: 1;
+    width: 10vw;
+    height: 10vh;
+    
+  }
+  .hamb a {
+    color: orange;
+    text-decoration: none;
+    font-size: 1em;
+    
+  }
+  html, body, .hero {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .hero {
+    width: 100%;
+    min-height: 600px;
+    background-image:url(testmonial-bg.jpg);
+      background-size: cover;
+  }
+  h1 {
+    font-size: 5em;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  #bubble {
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -2%;
+    opacity: 1;
+    position: fixed;
+    display: none;
+    z-index: 1;
+    background: rgba(0, 0, 0, 1);
+  }
+       
+          
+          .gap{
+               
+              color: white;
+              margin-top: 100px;
+              width: 200px;
+              
+               
+               
+          }
+          
+          h1 span{
+              font-size: 90px;
+              letter-spacing: 4;
+              margin-left: -30px;
+              color: orange;
+          }
+
+</style>
+
+
+<nav role='navigation' id="mainnav">
+  <br><br><br>
+<ul class="gap">
+  <li><a href="tobb.html">RÓLUNK</a></li>
+  <br><br><br><br><br><br><br><br><br><br>
+  <li><a href="arak.html">ÁRAK</a></li>
+  <br><br><br><br><br><br><br><br><br><br>
+  <li><a href="index.html">VISSZA</a></li>
+</ul>
+</nav>  
+
+<div class="hamb">
+<a href="#"><i class="fa fa-bars gomb"></i></a>
+</div>
+
+
+
+<canvas id="bubble"></canvas>
+
+
+<image src="{% static 'images/genius.jpg'%}" class="hatter"></image>
+<image src="{% static 'images/mobil.jpg'%}" class="hatter2"></image>
+<div class="button_container">
+	
+	<a href="{% url 'store'%}"> <button class="btn" ><span>Több infó</span></button> </a>
+</div>
+
+
+<div id="container1312" style="position: absolute; left: 0%; top: 0%;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+
+
+
+
+	
+
+
+
+	<script src="{% static 'js/jquery.min.js' %}"> </script>
+	<script src="{% static 'js/three.min.js' %}"> </script>
+	<script src="{% static 'js/Stats.min.js' %}"> </script>
+
+  <script src="menu.js"></script>
+	<script src="{% static 'js/loader.js' %}"></script>
+  <script src="{% static 'js/off.js' %}"></script>
+
+  
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    
+</body>
+</html>
